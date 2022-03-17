@@ -1,5 +1,5 @@
 {% set name = "chemlite" %}
-{% set version = "2.6.1" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/brsynth/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: b7529b9ba34926eb51b45f43cff6574e5810fe396a70f0693f5aa0921b7b7f49
+  sha256: 8584261048df41a101587773e7145d7adf8ba15600287a9506e2d975ab908571
 
 build:
   number: 0
@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://github.com/brsynth/chemlite
-  summary: "Basic representation of compounds, reactions, pathways"
+  summary: Basic representation of compounds, reactions, pathways
   license: MIT
   license_file: LICENSE
   doc_url: https://brsynth.github.io/chemlite
