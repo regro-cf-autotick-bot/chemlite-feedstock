@@ -10,16 +10,16 @@ source:
   sha256: 8584261048df41a101587773e7145d7adf8ba15600287a9506e2d975ab908571
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install -vv .
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - brs_utils
 
 test:
@@ -29,6 +29,7 @@ test:
     - chemlite
   requires:
     - pytest
+    - python {{ python_min }}
   commands:
     - cd tests
     - pytest -v
